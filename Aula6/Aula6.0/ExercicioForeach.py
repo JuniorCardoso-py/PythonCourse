@@ -26,7 +26,7 @@ for bla3 in range(1,5):
 #for bla5 in range(1,5):
     #nota.append(float(input(f'Qual as notas do quarto aluno{bla5+1} ?')))
 print(f'\n A nota do Aluno 1 é {nota[0,4]} e sua media é : {(nota[0,4]/4)}')
-print(f'\n A nota do Aluno 2 é {Nota[4,9]} e sua media é : {(Nota[0,4]/4)}')
+print(f'\n A nota do Aluno 2 é {nota[4,9]} e sua media é : {(nota[0,4]/4)}')
 #print(f'\n A nota do Aluno 3 é {Nota[9,14]} e sua media é : {(Nota[0,4]/4)}')
 #print(f'\n A nota do Aluno 4 é {Nota[14,19]} e sua media é : {(Nota[0,4]/4)}')
 

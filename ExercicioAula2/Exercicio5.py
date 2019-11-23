@@ -3,3 +3,4 @@
 #--- Os dados dos papeis devem estar em variáveis
 #--- Papel: Nome, Tipo, Cotação Atual e Valores Min e Max do dia 
 #--- A tela deve conter cabeçalho e rodapé  
+

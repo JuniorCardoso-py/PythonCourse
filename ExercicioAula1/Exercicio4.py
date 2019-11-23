@@ -28,7 +28,7 @@ if boas_vindas == resS:
             print('Continue com o menu')
         n2.append(input('Deseja somente olhar o nosso menu de produtos e preços digite: [Sim/Não]'))
         if n2[2] == resS:
-            print('Aqui estão todos nossos produtos\n\t BEBIDAS ALCOOLICAS \nSkol R$ 1,89 \nOriginal R$2,90 \nPatagonia R$3,50\nSuco R$ 1,89 \Fanta R$2,90 \nGuaraná R$3,50')
+            print('Aqui estão todos nossos produtos\n\t BEBIDAS ALCOOLICAS \nSkol R$ 1,89 \nOriginal R$2,90 \nPatagonia R$3,50 \nSuco R$ 1,89 \Fanta R$2,90 \nGuaraná R$3,50')
             break
 if boas_vindas == resN:
     print('\nTudo bem volte sempre!!')
