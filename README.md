@@ -1,1 +1,1 @@
-Repositorio Git HBSIS Curos
+Repositorio Git HBSIS Curso
