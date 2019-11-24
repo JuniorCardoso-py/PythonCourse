@@ -22,7 +22,7 @@ salario = float(input('Qual é o seu salario?: '))
 
 def calculo_inss(salario):
     if (salario >0 and salario <= 1751.81):
-    inss = salario * 0.08
+    inss = float(salario * 0.08)
     elif (salario > 1751.81 and salario <= 2919.72):
     inss = salario * 0.095
     elif (salario > 2919.72 and salario <= 5839.45):

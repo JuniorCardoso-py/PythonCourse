@@ -2,10 +2,10 @@
 #
 #--- Web - Calculadora
 
-nome_pagina = 'Calculadora'
 from flask import Flask, render_template, request
 from metodos import *
 app= Flask(__name__)
+nome_pagina = 'Calculadora'
 
 @app.route('/')
 def home():
