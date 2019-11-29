@@ -14,12 +14,12 @@ def ler():
     arquivo.close()
     return lista
 
-# nome  = input('Digite nome : ')
-# sobrenome = input('Digite o sobrenome : ')
-# idade = int(input('Digite a idade : '))
+nome  = input('Digite nome : ')
+sobrenome = input('Digite o sobrenome : ')
+idade = int(input('Digite a idade : '))
 
-# pessoa = {'nome':nome, 'sobrenome':sobrenome, 'idade':idade}
-# salvar_pessoa(pessoa)
+pessoa = {'nome':nome, 'sobrenome':sobrenome, 'idade':idade}
+salvar_pessoa(pessoa)
 
 for p in ler():
     print(f"{p['nome']} - {p['sobrenome']} - {p['idade']}")
