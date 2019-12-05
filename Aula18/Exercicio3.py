@@ -36,4 +36,7 @@ for dados_cerveja in dados: # para cada elemento ou nesse caso para cada tupla n
     print(f'\n{cabe[2]} - {dados_cerveja[2]}')
     print(f'\n{cabe[3]} - {dados_cerveja[3]}')
 
+for dados_cerveja in dados:
+    for i in range(4):
+        print(f'\n{cabe[i]} - {dados_cerveja[i]}')
 

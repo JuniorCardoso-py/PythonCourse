@@ -11,8 +11,9 @@
 
 # 3 - Faça uma terceira função que ao digitar o código do participante ele imprima o nome do participante, 
 # o valor do ingresso, e em caso de menores de idade apareça o texto "Entrada Proibida!"
-
-
-arquivo = open('Cadastro.txt', 'a')
-arquivo.write = 'Cadastro de Participantes'
+arquivo = open('Cadastro.txt', 'w')
+arquivo.write('Cadastro de Clientes\n')
+arquivo.write(input('Cadastre o nome do participante: '))
+arquivo.write(input('Digite o sexo: '))
+arquivo.write(input('Digite a idade: '))
 arquivo.close()
