@@ -27,4 +27,3 @@ print('\n', '='*50)
 print('\n','\t'*3, f'A minha idade é {idade} o meu salario é {salario} o meu nome é {nome} verdadeiro: {verdadeiro} Falso {falso} ')
 # a forma acima se chama interpolação de string.
 print('\n','='*50)
-
