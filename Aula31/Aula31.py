@@ -33,8 +33,3 @@
 # update pessoa
 #     set idade = 24
 #     where id = 4
-
-
-
-
-
