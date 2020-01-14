@@ -37,9 +37,34 @@ def deletar(cn,cr,id):
 conexao = MySQLdb.connect(host='127.0.0.1', database='junior_aula_bancodados',user='root',passwd='')
 cursor = conexao.cursor()
 
+def add_via_input(cn,cr):
+    print('Adicionando novos dados a Tabela!!\n')
+    nome = input('Digite o nome para cadastro: ')
+    sobrenome = input('Digite o sobrenome para cadastro: ')
+    try:
+        idade = int(input('Digite o idade para cadastro: '))
+        if idade != int:
+            return idade
+        endereco_id = int(input('Digite o numero do endereço cadastrado: '))
+        if endereco_id != int:
+            return endereco_id
+    except ValueError:
+        print('Digite apenas numeros! ')
+    cr.execute(f"INSERT INTO pessoa (NOME,SOBRENOME,IDADE,ENDERECO_ID)VALUES('{nome}','{sobrenome}',{idade},{endereco_id})")
+    cn.commit()
+    perg = input(str('Deseja Cadastrar mais alguem? [S/N]: '))
+    if perg == 'S':
+        return add_via_input(cn,cr)
+    elif perg == 'N':
+        print('Obrigado Volte sempre')
+    else:
+        print('Digite somente a letra S para sim e N para não!')
+        return perg
+    listar_todos(cursor)
 
-alterar(conexao, cursor,4,'Voltolini','KingOfbasquete',16,4)
+add_via_input(conexao, cursor)
+#alterar(conexao, cursor,4,'Voltolini','KingOfbasquete',16,4)
 #salvar(conexao,cursor,'Oi','Tchau',50,4)
-listar_todos(cursor)
+#listar_todos(cursor)
 #buscar_por_id(cursor, 3)
 #deletar(conexao, cursor,7)
