@@ -32,7 +32,8 @@ def alterar(cn,cr,id,nome,sobrenome,idade,endereco_id):
 def deletar(cn,cr,id):
     cr.execute(f'DELETE FROM pessoa WHERE ID={id}')
     cn.commit()
-
+def retorno(a):
+    return a
 
 conexao = MySQLdb.connect(host='127.0.0.1', database='junior_aula_bancodados',user='root',passwd='')
 cursor = conexao.cursor()
@@ -41,15 +42,8 @@ def add_via_input(cn,cr):
     print('Adicionando novos dados a Tabela!!\n')
     nome = input('Digite o nome para cadastro: ')
     sobrenome = input('Digite o sobrenome para cadastro: ')
-    try:
-        idade = int(input('Digite o idade para cadastro: '))
-        if idade != int:
-            return idade
-        endereco_id = int(input('Digite o numero do endereço cadastrado: '))
-        if endereco_id != int:
-            return endereco_id
-    except ValueError:
-        print('Digite apenas numeros! ')
+    idade = int(input('Digite o idade para cadastro: '))
+    endereco_id = int(input('Digite o numero do endereço cadastrado: '))
     cr.execute(f"INSERT INTO pessoa (NOME,SOBRENOME,IDADE,ENDERECO_ID)VALUES('{nome}','{sobrenome}',{idade},{endereco_id})")
     cn.commit()
     perg = input(str('Deseja Cadastrar mais alguem? [S/N]: '))

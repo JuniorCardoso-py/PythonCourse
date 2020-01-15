@@ -1,0 +1,13 @@
+1;Junior;Narguileiro;23;None
+2;Miguel;Bernardo;3;2
+3;HBSIS;MercadoTEch;3;3
+4;Voltolini;KingOfbasquete;16;4
+7;Ana;Banana;22;1
+8;Matheus;Abreu;20;10
+9;Matheus;Abreu;20;10
+10;Mateus;Abreu;23;1
+11;Julia;Coisa;32;20
+12;Santa;Claus;2020;25
+13;Michael;Jackson;50;24
+14;Bill;Gates;90;77
+15;Bolsonaro;Messias;64;15
