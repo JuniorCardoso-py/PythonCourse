@@ -7,7 +7,7 @@ class Pessoa:
 
     def exportar_txt(self, lista_pessoas):
         #----- Cria um arquivo e atribui a uma variável 'arquivo'
-        with open('33-Aula33/Aula33-4/pessoas4.txt','a') as arquivo:
+        with open('Aula33/Aula33-4/pessoas4.txt','a') as arquivo:
             #---- Percorre a lista de dicionário e salva no arquivo em formato pré-definido
             for p in lista_pessoas:
                 arquivo.write(f"{str(p)}\n")
