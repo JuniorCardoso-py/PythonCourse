@@ -1,0 +1,9 @@
+1;Maykon Dyego;Granemann;24;5
+3;Nicole;Gruber;19;None
+4;Josué;KingOfList;16;5
+5;Josué;KingOfList;16;None
+6;Voltolini;KingOfFlask;16;None
+8;Gugu Voltolini;KingOfBasquete;17;5
+9;MAYKAO;LINDAO;65;None
+10;MAYKAO;LINDAO;65;None
+11;Antonio;Carregado;11;None
