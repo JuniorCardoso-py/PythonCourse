@@ -3,14 +3,47 @@
 # 2 - Criar dao Squad
 # 3 - Criar Model Squad
 # 4 - Criar controller Squad
-# 5 - Criar View tipo conselo para realizar as 4 operações de CRUD de Squads
+# 5 - Criar View tipo console para realizar as 4 operações de CRUD de Squads
 # 6 - Criar View tipo web para realizar as 4 operaçoes de CRUD
 # Squad: Nome, Descrição, NumeroPessoas,LinguagemBackEnd,
 import MySQLdb
+from time import sleep
 conexao=MySQLdb.connect(host='127.0.0.1', database='squads', user='root', passwd='')
 cursor = conexao.cursor()
 
+def menu():
+    print('#'*50, '\n\t\tBem Vindo ao menu principal!!','\n','#'*50)
+    criar = input('Se deseja criar uma tabela com um novo time digite [1]: ')
+    if criar == '1':
+        salvar()
+        cursor.execute('SELECT * FROM SQUAD')
+        resultado = cursor.fetchall()
+        for times in resultado:
+            print(f'Times cadastrados: {times}\n')
+    else:
+        pass
+    ver = input('Se deseja visualizar os times ja cadastrados digite [2]: ')
+    if ver == '2':
+        listar_todos()
+    else:
+        pass
+    atualizar = input('Se deseja atualizar alguma tabela digite [3]: ')
+    if atualizar == '3':
+        alterar()
+    else:
+        pass
+    apagar = input('Se deseja deletar algum time digite [4]: ')
+    if apagar == '4':
+        deletar()
+    else:
+        pass
+    sair = input('Se deseja sair do sistema digite [0]: ')
+    if sair == '0':
+        print('Obrigado volte sempre!! ')
+        pass
+
 def salvar():
+    print('\t\tBem vindo ao sistema de cadastro de times!!\n')
     cursor.execute('SELECT * FROM SQUAD')
     resultado = cursor.fetchall()
     print(resultado)
@@ -26,6 +59,10 @@ def salvar():
     elif perg != 'Y' or 'y':
         print('Fim do programa')
 
+def listar_todos():
+    cursor.execute("SELECT * FROM SQUAD")
+    lista_tuplas = cursor.fetchall()
+    print(lista_tuplas)
 
 def alterar():
     print('\t\tBem Vindo ao Sistema de alteração!!!')
@@ -89,6 +126,13 @@ def alterar():
         framework = input('Digite o framework utilizado time: ')
         cursor.execute(f"UPDATE SQUAD SET Nome = '{nome}', Descrição = '{descri}', NumeroPessoas = {numero_pessoas}, LinguagemBackEnd = '{linguagem}', FrameworkFrontEnd = '{framework}' WHERE ID={id} ")
         conexao.commit()
-alterar()
 
+def deletar():
+    print('\t\tBem vindo ao sistema de remoção de times\n')
+    listar_todos()
+    id_delete = int(input('Digite o id do time que deseja deletar: '))
+    cursor.execute(f"DELETE FROM SQUAD WHERE ID ={id_delete}")
+    conexao.commit()
+
+alterar()
 
