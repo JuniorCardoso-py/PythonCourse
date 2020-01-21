@@ -87,7 +87,7 @@ def alterar():
         numero_pessoas = int(input('Digite a quantidade de pessoas no time: '))
         linguagem = input('Digite a linguagem  de programação do time: ')
         framework = input('Digite o framework utilizado time: ')
-        cursor.execute(f"UPDATE SQUAD SET (Nome, Descrição, NumeroPessoas, LinguagemBackEnd, FrameworkFrontEnd) VALUES ('{nome}','{descri}',{numero_pessoas},'{linguagem}','{framework}') WHERE ID={id} ")
+        cursor.execute(f"UPDATE SQUAD SET Nome = '{nome}', Descrição = '{descri}', NumeroPessoas = {numero_pessoas}, LinguagemBackEnd = '{linguagem}', FrameworkFrontEnd = '{framework}' WHERE ID={id} ")
         conexao.commit()
 alterar()
 
