@@ -5,7 +5,8 @@ from pessoa_controller.controller_pessoa import PessoaController
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(PessoaController, '/api/pessoa')
+api.add_resource(PessoaController, '/api/pessoas', endpoint = 'pessoas')
+api.add_resource(PessoaController, '/api/pessoa/<id:int>',endpoint = 'pessoa')
 
 @app.route('/')
 def inicio():
