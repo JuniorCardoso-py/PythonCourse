@@ -1,11 +1,15 @@
-from flask_mysqldb import MySQL
+import MySQLdb
 
 
-conexao = MySQL.connect(host='127.0.0.1' ,database= 'exercicio_restful',user='root' ,passwd = '')
+conexao = MySQLdb.connect(host='127.0.0.1' ,database= 'exercicio_restful',user='root' ,passwd = '')
 cursor = conexao.cursor()
 
 
 class PessoaDao:
+    def __init__(self):
+        self.conexao = MySQLdb.connect(host='127.0.0.1', database='exercicio_restful', user='root', passwd='')
+        self.cursor = conexao.cursor()
+
     def list_all(self):
         return 'listando todos os dados da tabela'
 
