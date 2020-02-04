@@ -9,14 +9,15 @@ class Narguile_controller(Resource):
     def __init__(self):
         self.dao = Narguile_Dao()
 
+
     def get(self, id=None):
         if id:
-            msg_json = self.dao.buscar_por_id(self.id)
+            msg_json = self.dao.buscar_por_id(id)
             return msg_json
         return self.dao.listar_tudo()
 
     def post(self):
-        nome = request.json['nome_narguile']
+        nome = request.json['nome']
         tamanho = request.json['tamanho']
         valor = int(request.json['valor'])
         narguile = Narguile_model(nome,tamanho,valor)
