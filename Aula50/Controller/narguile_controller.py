@@ -1,8 +1,8 @@
 from flask_restful import Resource
 from flask import request
 
-from Aula50.Dao.narguile_dao import Narguile_Dao
-from Aula50.Model.narguile_model import Narguile_model
+from PythonCourse.Aula50.Dao.narguile_dao import Narguile_Dao
+from PythonCourse.Aula50.Model.narguile_model import Narguile_model
 
 
 class Narguile_controller(Resource):

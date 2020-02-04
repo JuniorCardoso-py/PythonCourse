@@ -1,6 +1,6 @@
 import MySQLdb
-from Aula50.Model.narguile_model import Narguile_model
-from flask import request
+from PythonCourse.Aula50.Model.narguile_model import Narguile_model
+
 
 class Narguile_Dao:
     def __int__(self):
