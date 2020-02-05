@@ -9,7 +9,6 @@ class Narguile_controller(Resource):
     def __init__(self):
         self.dao = Narguile_Dao()
 
-
     def get(self, id=None):
         if id:
             msg_json = self.dao.buscar_por_id(id)
