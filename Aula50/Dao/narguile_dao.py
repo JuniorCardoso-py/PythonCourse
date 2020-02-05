@@ -1,5 +1,9 @@
 import MySQLdb
+<<<<<<< HEAD
+from PythonCourse.Aula50.Model.narguile_model import Narguile_model
+=======
 from Aula50.Model.narguile_model import Narguile_model
+>>>>>>> 5691ac37e1bfa460dd2d1456e6af6e80021d1b72
 
 
 class Narguile_Dao:
