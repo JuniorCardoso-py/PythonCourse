@@ -24,7 +24,7 @@ class Narguile_controller(Resource):
         return msg_json
 
     def put(self,id):
-        nome = request.json['nome_narguile']
+        nome = request.json['nome']
         tamanho = request.json['tamanho']
         valor = int(request.json['valor'])
         narguile = Narguile_model(nome,tamanho,valor,id)
