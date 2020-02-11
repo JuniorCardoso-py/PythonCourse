@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 
-from PythonCourse.Aula50.Controller.narguile_controller import Narguile_controller
+from Aula50.Controller.narguile_controller import Narguile_controller
 
 app = Flask(__name__)
 api = Api(app)
